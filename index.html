@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Istituzionale Re d'Italia Art</title>
+<meta name="description" content="Depliant istituzionale di M&amp;M Re d'Italia Art">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2a0b11">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Re d'Italia Art">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: elegante e semplicissimo, per persone non tecniche.
+   IDEA: il biglietto da visita della maison che diventa un'app sul telefono.
+   PICTURE: l'icona con la corona grande, come apparirà sulla schermata Home.
+   COLOUR and TYPE: bordeaux profondo, oro, avorio; Cormorant Garamond per i titoli, Manrope per le istruzioni.
+   LAYOUT: una colonna: icona, nome, pulsante Entra, poi la guida con una scheda per dispositivo. */
+:root{color-scheme:dark;--bg:#1a070b;--card:#2a0d13;--line:rgba(232,191,98,.28);--gold:#e8bf62;--gold2:#f6dc98;--ink:#f3ead8;--soft:#cdb9a0}
+*{box-sizing:border-box;min-width:0}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -10%,#5a1420 0%,#2a0b11 45%,#12050a 100%) fixed,var(--bg);color:var(--ink);font:17px/1.55 Manrope,system-ui,sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.wrap{max-width:620px;margin:0 auto;padding:36px 18px 56px}
+.hero{text-align:center}
+.app-ic{width:132px;height:132px;border-radius:30px;display:block;margin:0 auto 18px;box-shadow:0 18px 40px rgba(0,0,0,.55),0 0 0 1px rgba(232,191,98,.35)}
+h1{font:600 clamp(34px,8vw,46px)/1.05 "Cormorant Garamond",Georgia,serif;margin:0;color:var(--gold2);text-wrap:balance}
+.by{font:italic 500 19px/1.3 "Cormorant Garamond",Georgia,serif;color:var(--soft);margin:8px 0 0}
+.enter{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:360px;min-height:56px;margin:26px auto 0;border:0;border-radius:14px;background:linear-gradient(180deg,#f6e0a0,#d2a650 55%,#b08333);color:#1f0a0e;font:700 18px Manrope,sans-serif;text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5)}
+.enter:focus-visible,.tab:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.hint{font-size:14px;color:var(--soft);margin:10px 0 0}
+.orn{display:flex;align-items:center;justify-content:center;gap:10px;margin:34px 0 22px;color:var(--gold)}
+.orn i{height:1px;width:90px;background:linear-gradient(90deg,transparent,var(--gold))}.orn i:last-child{transform:scaleX(-1)}
+.orn b{width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+h2{font:600 32px/1.1 "Cormorant Garamond",Georgia,serif;color:var(--gold2);text-align:center;margin:0 0 6px}
+.lead{text-align:center;color:var(--soft);margin:0 0 18px;font-size:16px}
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-bottom:0}
+.tab{min-height:48px;padding:8px 4px;border:1px solid var(--line);border-bottom:0;border-radius:12px 12px 0 0;background:rgba(0,0,0,.25);color:var(--soft);font:600 15px Manrope,sans-serif;cursor:pointer}
+.tab[aria-selected=true]{background:var(--card);color:var(--gold2);border-color:var(--gold)}
+.panel{background:var(--card);border:1px solid var(--gold);border-radius:0 0 16px 16px;padding:20px 18px 8px}
+.panel h3{font:600 24px/1.15 "Cormorant Garamond",Georgia,serif;color:var(--gold2);margin:0 0 4px}
+.panel .note{font-size:15px;color:var(--soft);margin:0 0 14px}
+ol{list-style:none;counter-reset:s;margin:0;padding:0}
+ol li{counter-increment:s;position:relative;padding:0 0 18px 50px}
+ol li:before{content:counter(s);position:absolute;left:0;top:-2px;width:34px;height:34px;border-radius:50%;background:var(--gold);color:#1f0a0e;font:700 17px/34px Manrope,sans-serif;text-align:center}
+ol li b{color:var(--gold2)}
+.key{display:inline-flex;align-items:center;gap:4px;padding:1px 8px;border:1px solid var(--line);border-radius:7px;background:rgba(0,0,0,.3);white-space:nowrap;font-weight:600}
+.key svg{width:16px;height:16px}
+.done{margin:4px 0 16px;padding:12px 14px;border-radius:12px;background:rgba(232,191,98,.1);border:1px solid var(--line);font-size:15px}
+.done img{width:34px;height:34px;border-radius:8px;vertical-align:middle;margin-right:8px}
+.first{margin-top:26px;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:rgba(0,0,0,.2)}
+.first h3{font:600 22px/1.2 "Cormorant Garamond",Georgia,serif;color:var(--gold2);margin:0 0 6px}
+.first p{margin:0 0 6px;font-size:15px}
+.foot{text-align:center;font:italic 500 17px "Cormorant Garamond",Georgia,serif;color:var(--soft);margin-top:30px}
+.splash{position:fixed;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:var(--bg);z-index:5}
+.splash p{font:italic 500 20px "Cormorant Garamond",Georgia,serif;color:var(--soft);margin:0}
+.app-mode .splash{display:flex}
+@media(max-width:420px){.tab{font-size:13px}ol li{padding-left:44px}}
+@media(prefers-reduced-motion:no-preference){.app-ic{animation:rise .8s ease both}@keyframes rise{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<div class="splash" aria-hidden="true"><img class="app-ic" src="icon-512.png" alt=""><p>Apertura del depliant…</p></div>
+<main class="wrap">
+ <header class="hero">
+  <img class="app-ic" src="icon-512.png" alt="Icona Istituzionale Re d'Italia Art">
+  <h1>Istituzionale Re d'Italia Art</h1>
+  <p class="by">M&amp;M Re d'Italia Art · Il depliant della maison, sempre con te</p>
+  <a class="enter" id="enter" href="#">Apri il depliant</a>
+  <p class="hint">Per averlo sempre a portata di mano, installalo una volta seguendo la guida qui sotto.</p>
+ </header>
+
+ <div class="orn"><i></i><b></b><i></i></div>
+
+ <section aria-labelledby="g">
+  <h2 id="g">Installa l'app in 1 minuto</h2>
+  <p class="lead">Scegli il tuo dispositivo. Abbiamo già selezionato quello che stai usando.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="panel" role="tabpanel" id="panel" aria-live="polite"></div>
+ </section>
+
+
+ <p class="foot">M&amp;M Re d'Italia Art · Arte Italia Nostra 2026/2027</p>
+</main>
+<script>
+{
+const CRM = "https://claude.ai/artifact/HqVe8476DkFNYqfF1sJZou";
+const share = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 12v8h14v-8"/></svg>';
+const dots = '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>';
+const done = '<div class="done"><img src="apple-touch-icon.png" alt="">Fatto! Ora trovi l\'icona <b>Re d\'Italia Art</b> con la corona: aprila da lì ogni volta.</div>';
+const D = [
+ {k:"iphone", t:"iPhone", h:"iPhone e iPad", n:"Usa Safari, il browser con la bussola blu.", s:[
+  "Apri questa pagina con <b>Safari</b>.",
+  "Tocca il tasto <span class=\"key\">"+share+" Condividi</span> in basso al centro (su iPad è in alto).",
+  "Scorri verso il basso e tocca <b>Aggiungi alla schermata Home</b>.",
+  "Tocca <b>Aggiungi</b> in alto a destra."]},
+ {k:"android", t:"Android", h:"Telefono Android", n:"Usa Google Chrome.", s:[
+  "Apri questa pagina con <b>Chrome</b>.",
+  "Tocca i tre puntini <span class=\"key\">"+dots+"</span> in alto a destra.",
+  "Tocca <b>Aggiungi a schermata Home</b> (oppure <b>Installa app</b>).",
+  "Conferma con <b>Installa</b> o <b>Aggiungi</b>."]},
+ {k:"windows", t:"Windows", h:"Computer Windows", n:"Usa Google Chrome oppure Microsoft Edge.", s:[
+  "Apri questa pagina con <b>Chrome</b> o <b>Edge</b>.",
+  "<b>Chrome:</b> tocca i tre puntini <span class=\"key\">"+dots+"</span> in alto a destra → <b>Trasmetti, salva e condividi</b> → <b>Installa pagina come app</b>.",
+  "<b>Edge:</b> tocca i tre puntini <span class=\"key\">···</span> → <b>App</b> → <b>Installa questo sito come app</b>.",
+  "Conferma con <b>Installa</b>: l'icona compare sul desktop e nel menu Start."]},
+ {k:"mac", t:"Mac", h:"Computer Mac", n:"Va bene sia Safari sia Chrome.", s:[
+  "<b>Safari:</b> apri questa pagina, poi dal menu in alto scegli <b>File</b> → <b>Aggiungi al Dock</b> → <b>Aggiungi</b>.",
+  "<b>Chrome:</b> tocca i tre puntini <span class=\"key\">"+dots+"</span> → <b>Trasmetti, salva e condividi</b> → <b>Installa pagina come app</b>.",
+  "L'icona con la corona compare nel Dock: aprila da lì."]}
+];
+const ua = navigator.userAgent, plat = navigator.platform || "";
+const isIOS = /iPhone|iPad|iPod/.test(ua) || (plat === "MacIntel" && navigator.maxTouchPoints > 1);
+let cur = isIOS ? 0 : /Android/.test(ua) ? 1 : /Mac/.test(plat) ? 3 : 2;
+const tabs = document.getElementById("tabs"), panel = document.getElementById("panel");
+tabs.innerHTML = D.map((d, i) => `<button class="tab" role="tab" id="t-${d.k}" data-i="${i}" aria-selected="false">${d.t}</button>`).join("");
+const show = i => {
+ cur = i; const d = D[i];
+ tabs.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", String(+b.dataset.i === i)));
+ panel.setAttribute("aria-labelledby", "t-" + d.k);
+ panel.innerHTML = `<h3>${d.h}</h3><p class="note">${d.n}</p><ol>${d.s.map(x => `<li>${x}</li>`).join("")}</ol>${done}`;
+};
+tabs.addEventListener("click", e => { const b = e.target.closest(".tab"); if (b) show(+b.dataset.i); });
+show(cur);
+document.getElementById("enter").href = CRM;
+const standalone = window.navigator.standalone === true || (window.matchMedia && matchMedia("(display-mode: standalone)").matches);
+if (standalone) { document.documentElement.classList.add("app-mode"); setTimeout(() => location.replace(CRM), 450); }
+}
+</script>
+</body>
+</html>
